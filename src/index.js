@@ -46,7 +46,7 @@ const stream3$ = range(0,26)
 stream3$.subscribe(console.log);
 
 // custom subscribe
-const noop = () => {};
+const noop = Function.prototype;
 const sendServerLog = e => console.log(`Log sended to server ${e}`); // send info to a real server seq/log/etc.
 const completeLogin = fn => () => {
     sendServerLog(`finalized`);
