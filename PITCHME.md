@@ -35,7 +35,8 @@ Pipeline operator
 +++
 Caesar cipher
 
-![Caesar cipher](presentation/assets/Caesar_cipher.svg&size=contain
+![Caesar cipher](presentation/assets/Caesar_cipher.svg)
+
 +++?image=presentation/assets/66.png&size=contain
 +++?image=presentation/assets/00.png&size=contain
 +++?image=presentation/assets/01.png&size=contain
