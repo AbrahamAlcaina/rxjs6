@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open",
-    "start-presentation": "./node_modules/.bin/http-server -p 3000 ./local",
+    "start-presentation": "./node_modules/.bin/http-server -p 3000 ./presentation/local",
     "copy-assets": "cp presentation/assets/* presentation/local/assets/md/assets",
     "copy-pitchme": "cp PITCHME.md presentation/local/assets/md/PITCHME.md",
     "copy": "npm run copy-assets && npm run copy-pitchme"

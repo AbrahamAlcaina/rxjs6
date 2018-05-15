@@ -35,7 +35,9 @@ Pipeline operator
 +++
 Caesar cipher
 
-![Caesar cipher](presentation/assets/Caesar_cipher.png)
+![Caesar cipher](presentation/assets/Caesar_cipher.svg)
++++?image=presentation/assets/66.png
+### Start with fullscreen background images
 +++
 ![cupped](presentation/assets/66.png)
 +++
@@ -52,13 +54,17 @@ Caesar cipher
 ![pipe operator](presentation/assets/05.png)
 +++
 ![with reutilizable caesar operator](presentation/assets/06.png)
++++
 ![caesar operator](presentation/assets/caesar.png)
 +++
 ![with reutilizable last letter](presentation/assets/07.png)
++++
 ![last letter operator](presentation/assets/lastLetter.png)
 +++
 ![reutilizable subscribe](presentation/assets/08.png)
++++
 ![subscribe](presentation/assets/subscribe.png)
 +++
 ![extract dom operators](presentation/assets/09.png)
++++
 ![extract dom operators](presentation/assets/domManipulation.png)
