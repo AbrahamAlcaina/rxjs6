@@ -1,4 +1,4 @@
-logo : presentation/assets/logo.webp
+logo : presentation/assets/logo.png
 theme-override : presentation/assets/PITCHME.css
 background-color: #ABB8C3
 revealjs: 3.6.0
