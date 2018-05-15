@@ -1,8 +1,7 @@
 import { fromEvent } from "rxjs";
 import style from "./main.css";
-import ceasarEncrypt from "./operators/caesar";
-import lastLetter from "./operators/lastLetter";
-import subscribe from "./rx/subscribe";
+import { ceasarEncrypt, lastLetter } from "./operators";
+import { subscribe } from "./rx";
 // DOM manipulation
 const inputText = document.getElementById("input-text");
 const encryptedText = document.getElementById("encrypted-text");

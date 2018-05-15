@@ -1,0 +1,4 @@
+theme : black
+logo : presentation/assets/logo.webp
+theme-override : presentation/assets/PITCHME.css
+revealjs: 3.4.1
