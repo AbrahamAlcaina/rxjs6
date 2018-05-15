@@ -1,6 +1,10 @@
 {
-    "plugins": ["@babel/plugin-proposal-pipeline-operator"],
+    "plugins": ["@babel/plugin-proposal-pipeline-operator", "@babel/plugin-proposal-export-default-from", "@babel/plugin-proposal-export-namespace-from"],
     "presets": [
-        "@babel/env"
+        ["@babel/preset-env", {
+            "targets" :{
+            "browsers": [ ">0.25%", "not ie 11", "not op_mini all"]
+            }
+        }]
     ]
 }
