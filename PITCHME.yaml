@@ -1,4 +1,4 @@
-theme : black
 logo : presentation/assets/logo.webp
 theme-override : presentation/assets/PITCHME.css
+background-color : #abb8c3;
 revealjs: 3.6.0
