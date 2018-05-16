@@ -43,14 +43,17 @@ Enjoy
 ![Caesar cipher](presentation/assets/Caesar_cipher.png)
 
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
+<!-- .slide: data-layout="top-left" -->
 @title[classical implementation with inline functions]
 @div[right-50]
-Problems 
+@color[gray](
+Problems:
 @ul
-- Change prototype |
-- Hard to test it |
+- Change prototype
+- Hard to test it
 - No code reuse 
 @ulend
+)
 @divend
 
 +++?image=presentation/assets/00.png&size=contain&color=#ABB8C3
