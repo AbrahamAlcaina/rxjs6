@@ -43,9 +43,8 @@ Enjoy
 ![Caesar cipher](presentation/assets/Caesar_cipher.png)
 
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
-<!-- .slide: data-layout="top-left" -->
 @title[classical implementation with inline functions]
-### @css[issues](things to improve:) |
+- @css[issues](things to improve:) |
 - @css[issues](Change prototype) |
 - @css[issues](Hard to test it) |
 - @css[issues](No code reuse) | 
