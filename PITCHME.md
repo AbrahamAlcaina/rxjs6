@@ -26,7 +26,7 @@ Enjoy
 ---
 @title[Example pipeline]
 # Pipeline example
-
+@fa[arrow-down]
 +++
 @title[Pipeline function]
 ## Pipeline function
@@ -39,16 +39,16 @@ Enjoy
 
 +++
 @title[Caesar algorithm explanation]
-##Caesar cipher
+## Caesar cipher
 ![Caesar cipher](presentation/assets/Caesar_cipher.png)
 
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 @title[classical implementation with inline functions]
 @div[right-50]
-### Problems
-- Change prototype
-- Hard to test it
-- No code reuse
+- Problems
+  - Change prototype |
+  - Hard to test it |
+  - No code reuse |
 @divend
 
 +++?image=presentation/assets/00.png&size=contain&color=#ABB8C3
@@ -92,4 +92,3 @@ Enjoy
 
 +++?image=presentation/assets/domManipulation.png&size=contain&color=#ABB8C3
 @title[DOM manipulation]
-
