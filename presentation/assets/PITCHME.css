@@ -4,6 +4,6 @@
 }
 .issues {
   color: white;
-  font-size: 1.3em;
-  list-style-type: none;
+  font-size: 2em !important;
+  list-style-type: none !important;
 }

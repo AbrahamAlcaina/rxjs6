@@ -46,9 +46,9 @@ Enjoy
 @title[classical implementation with inline functions]
 @ul[issues]
 - Things to improve: 
-- Change prototype 
-- Hard to test it 
-- No code reuse 
+  - Change prototype 
+  - Hard to test it 
+  - No code reuse 
 @ulend
 
 +++?image=presentation/assets/00.png&size=contain&color=#ABB8C3
