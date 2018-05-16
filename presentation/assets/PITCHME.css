@@ -2,9 +2,7 @@
     border: 0;
     box-shadow: none;
 }
-.text-left {
-  text-align: left
-}
-.text-right {
-  text-align: right
+.issues {
+  color: white;
+  text-align: right;
 }

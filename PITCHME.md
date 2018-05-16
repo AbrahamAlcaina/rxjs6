@@ -45,7 +45,7 @@ Enjoy
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 <!-- .slide: data-layout="top-left" -->
 @title[classical implementation with inline functions]
-### @color[White](things to improve:)
+### @css[issues](things to improve:)
 - Change prototype |
 - Hard to test it |
 - No code reuse | 
