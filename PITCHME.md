@@ -22,16 +22,19 @@ Second v5.5 -> v6 compat
 Third v6 compact -> v6
 +++
 Enjoy
+
 ---
-#Pipeline example
-+++
 @title[Example pipeline]
-##Pipeline function
+# Pipeline example
+
++++
+@title[Pipeline function]
+## Pipeline function
   https://github.com/ReactiveX/rxjs/blob/master/doc/pipeable-operators.md
+
 +++
 @title[Pipeline operator]
-##Pipeline operator
-
+## Pipeline operator
   https://github.com/tc39/proposal-pipeline-operator
 
 +++
@@ -41,7 +44,7 @@ Enjoy
 
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 @title[classical implementation with inline functions]
-@div[right-30]
+@div[right-50]
 ### Problems
 - Change prototype
 - Hard to test it
