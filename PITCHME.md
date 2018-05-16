@@ -45,8 +45,7 @@ Enjoy
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 <!-- .slide: data-layout="top-left" -->
 @title[classical implementation with inline functions]
-@div[right-90]
-@color[White](Problems:)
+@color[White](### Issues:)
 @ul
 - Change prototype
 - Hard to test it
