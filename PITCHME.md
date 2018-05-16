@@ -44,10 +44,12 @@ Enjoy
 
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 @title[classical implementation with inline functions]
-- @css[issues](things to improve:) |
-- @css[issues](Change prototype) |
-- @css[issues](Hard to test it) |
-- @css[issues](No code reuse) | 
+@css[issues](
+- Things to improve: |
+- Change prototype |
+- Hard to test it |
+- No code reuse | 
+)
 
 +++?image=presentation/assets/00.png&size=contain&color=#ABB8C3
 @title[classical implementation in Rx5]
