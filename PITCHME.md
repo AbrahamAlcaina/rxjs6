@@ -48,8 +48,8 @@ Enjoy
 @div[right-90]
 @color[White](Problems:)
 @ul
-- @css[text-left](Change prototype)
-- @css[text-right](Hard to test it)
+- Change prototype
+- Hard to test it
 - No code reuse 
 @ulend
 @divend
