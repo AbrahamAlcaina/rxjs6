@@ -45,11 +45,11 @@ Enjoy
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 <!-- .slide: data-layout="top-left" -->
 @title[classical implementation with inline functions]
-@div[right-50]
+@div[right-90]
 @color[White](Problems:)
 @ul
-- @css[title-top-right](Change prototype)
-- Hard to test it
+- @css[text-left](Change prototype)
+- @css[text-right](Hard to test it)
 - No code reuse 
 @ulend
 @divend

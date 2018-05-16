@@ -1,4 +1,10 @@
 .reveal section img {
     border: 0;
     box-shadow: none;
-  }
+}
+.text-left {
+  text-align: left
+}
+.text-right {
+  text-align: right
+}
