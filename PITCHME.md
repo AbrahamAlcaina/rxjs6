@@ -44,12 +44,12 @@ Enjoy
 
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 @title[classical implementation with inline functions]
-@css[issues](
-- Things to improve: |
-- Change prototype |
-- Hard to test it |
-- No code reuse | 
-)
+@ul[issues]
+- Things to improve: 
+- Change prototype 
+- Hard to test it 
+- No code reuse 
+@ulend
 
 +++?image=presentation/assets/00.png&size=contain&color=#ABB8C3
 @title[classical implementation in Rx5]
