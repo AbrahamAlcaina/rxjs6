@@ -46,9 +46,9 @@ Enjoy
 <!-- .slide: data-layout="top-left" -->
 @title[classical implementation with inline functions]
 @div[right-50]
-@color[gray](Problems:)
+@color[White](Problems:)
 @ul
-- Change prototype
+- @css[title-top-right](Change prototype)
 - Hard to test it
 - No code reuse 
 @ulend
