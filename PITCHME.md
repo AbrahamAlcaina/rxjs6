@@ -45,12 +45,10 @@ Enjoy
 +++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
 <!-- .slide: data-layout="top-left" -->
 @title[classical implementation with inline functions]
-### @color[White](Issues:)
-@ul
-- Change prototype
-- Hard to test it
-- No code reuse 
-@ulend
+### @color[White](things to improve:)
+- Change prototype |
+- Hard to test it |
+- No code reuse | 
 
 +++?image=presentation/assets/00.png&size=contain&color=#ABB8C3
 @title[classical implementation in Rx5]
