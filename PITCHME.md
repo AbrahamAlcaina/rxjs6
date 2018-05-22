@@ -8,20 +8,20 @@ All things are streams
 +++
 Copia de internnet
 ---
-What's the new in RX6?
+What's new in RX6?
 ---
-Migration de v5 -> v6
-+++
-First vX.Y -> v5.5
-- Migrate to pipe
-- tslint auto migrate code
-+++
-Second v5.5 -> v6 compat
-- Imports migration
-+++
-Third v6 compact -> v6
-+++
-Enjoy
+Migrating v5 -> v6
++++?code=presentation/assets/src/pipe_5.5.js&lang=js
+@title[vX.Y => v5.5]
+
+@[1-5](< v5.5)
+@[9-14](Using pipe)
+@[7-8](New imports)
+@[16-25](Custom operators < v5.5)
+@[27-37](v5.5+)
+
++++?code=presentation/assets/src/tslint_migrate.sh&lang=bash&title=TSLint tool magic
+@title[TSLint tool magic]
 
 ---
 @title[Example pipeline]
