@@ -10,18 +10,48 @@ Copia de internnet
 ---
 What's new in RX6?
 ---
-Migrating v5 -> v6
-+++?code=presentation/assets/src/pipe_5.5.js&lang=js
-@title[vX.Y => v5.5]
+# Migrating from v5
+@fa[arrow-down]
 
-@[1-5](< v5.5)
-@[9-14](Using pipe)
++++?code=presentation/assets/src/migrateToPipe.js&lang=js&title=Migrate to pipe
+@title[Migrate to pipe]
+
+@[1-5](<= v5.5)
+@[9-10,14](Using pipe)
 @[7-8](New imports)
-@[16-25](Custom operators < v5.5)
-@[27-37](v5.5+)
+@[1-3,7-11,14](Map)
+@[1-4,7-12,14](Filter)
+@[1-5,7-13,14](Reduce)
+
++++
+## A few name BC
+
+Note:
+Reserved JS names (if => iif, throw => throwError, do => tap, catch => catchError, etc.)
+some instance methods to static methods (merge, concat, combineLatest, zip, etc.)
 
 +++?code=presentation/assets/src/tslint_migrate.sh&lang=bash&title=TSLint tool magic
 @title[TSLint tool magic]
+
++++
+## rxjs-compat
+
+Note:
+To make migration easier we can use rxjs-compat, which brings old v5 API to v6. We still need to handle something though - Custom Operators
+
++++?code=presentation/assets/src/customOperators.js&lang=js&title=Custom Operators
+@title[Custom Operators]
+
+@[1-7](Old custom operator)
+@[9-12](Old usage)
+@[14-18](New custom operator)
+@[19,20](Named operators)
+@[22-27](New usage)
+
+Note:
+"Named operators" can be now used and they make sense, whereas before you shouldn't assume the type of the data when adding operators to the prototype (b/c it's being used in all types of Observable). And it works in TS
+Sidenote - gitpitch only shows 61x14 window of code
+Question => Does tslint tool migrate custom operators (defined in prototype) => No it doesn't, just basic boilerplate stuff (imports, pipes, method names)
 
 ---
 @title[Example pipeline]
