@@ -8,7 +8,24 @@ All things are streams
 +++
 Copia de internnet
 ---
-What's new in RX6?
+# What's new in RxJS@6?
+@fa[arrow-down]
+
++++?code=presentation/assets/src/import.js&lang=js&title=Imports
+
+@ul
+- Modularity
+- Tree shaking
+@ulend
+
++++?code=presentation/assets/src/pipe.js&lang=js&title=Pipe
+
+@ul
+- Compose operators
+- Custom operators
+- Easier to test
+@ulend
+
 ---
 # Migrating from v5
 @fa[arrow-down]
