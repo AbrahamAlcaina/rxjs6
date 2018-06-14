@@ -2,11 +2,62 @@ Rx.js 6
 --- 
 Who I am
 ---
-Introduction to rx
+# What's Rx?
+@fa[arrow-down]
+
 +++
-All things are streams
+![Yoda](presentation/assets/yoda.png)
+
+Stream Everything Is
+
 +++
-Copia de internnet
+![Array vs stream](presentation/assets/arrayVsStream.png)
+
+Note:
+In general, we can think of streams as values over time. If we compare it to an array, with an array we have all the
+values toghether in a single time, while a stream we get new values as the time passes. Note that these values can be
+arrays, or even other streams (so you can have an array of arrays or a stream of arrays or a stream of streams)
+
+Arrays are used to hold a group of values. Streams represent new values over time. That's why they are specially suitable
+for events, or data that changes over time.
+
++++
+## Sources
+
+@ul
+- Events: fromEvent(document, 'click')
+- Arrays: from([1,2,3,4])
+- Service calls: SockJS/Socket.io/Stomp/etc.
+- Promises
+- Subjects
+@ulend
+
++++?code=presentation/assets/src/composition.js&lang=js&title=Composition
+
++++?code=presentation/assets/src/composition2.js&lang=js&title=Composition
+
++++
+## Operators
+
+@ul
+- filter
+- map
+- reduce
+- take
+- buffer
+- combineLatest
+- concat
+- debounce
+- distinct
+- publish
+@ulend
+
+Note:
+There are over 100 operators, but these are the most often used (or variations of these, like scan, bufferTime, throttle, debounceTime, etc. )
+We can also define our own operators so we can use them everywhere we need, but most of what usually needs to be done can be
+covered using the new ones.
+(source https://github.com/ReactiveX/rxjs/blob/master/src/operators/index.ts)
+
 ---
 # What's new in RxJS@6?
 @fa[arrow-down]
