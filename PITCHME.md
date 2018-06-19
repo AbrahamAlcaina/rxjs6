@@ -1,6 +1,23 @@
-Rx.js 6
---- 
-Who I am
+# Rx6, the coolest Rx evolution
+
+---
+
+### Abraham Alcaina
+![Abraham](presentation/assets/abraham.jpg)
+
+@fa[twitter] @AbrahamAlcaina
+
+@fa[github] AbrahamAlcaina
+
++++
+
+### Víctor Oliva
+![Victor](presentation/assets/victor.jpg)
+
+@fa[twitter] @voliva_v
+
+@fa[github] voliva
+
 ---
 # What's Rx?
 @fa[arrow-down]
@@ -24,22 +41,25 @@ for events, or data that changes over time.
 +++
 ## Sources
 
-@ul
 - Events: fromEvent(document, 'click')
 - Arrays: from([1,2,3,4])
 - Service calls: SockJS/Socket.io/Stomp/etc.
 - Promises
 - Subjects
-@ulend
 
 +++?code=presentation/assets/src/composition.js&lang=js&title=Composition
 
-+++?code=presentation/assets/src/composition2.js&lang=js&title=Composition
++++?code=presentation/assets/src/composition2.js&lang=js
+
+@[1-14](Composition)
+@[18-24](Marble diagram)
+
++++
+![Composition](presentation/assets/composition.png)
 
 +++
 ## Operators
 
-@ul
 - filter
 - map
 - reduce
@@ -50,7 +70,6 @@ for events, or data that changes over time.
 - debounce
 - distinct
 - publish
-@ulend
 
 Note:
 There are over 100 operators, but these are the most often used (or variations of these, like scan, bufferTime, throttle, debounceTime, etc. )

@@ -7,7 +7,7 @@ const myButton = $('#myButton'),
 const source = fromEvent(myButton, 'click');
 
 const numOfClicks = source
-    |> scan(count => count + 1, 0);
+    .scan(count => count + 1, 0);
 
 numOfClicks
     .subscribe(n => myResult.innerText = n);
