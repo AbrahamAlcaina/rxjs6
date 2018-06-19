@@ -49,7 +49,13 @@ for events, or data that changes over time.
 
 +++?code=presentation/assets/src/composition.js&lang=js&title=Composition
 
-+++?code=presentation/assets/src/composition2.js&lang=js&title=Composition
++++?code=presentation/assets/src/composition2.js&lang=js
+
+@[1-14](Composition)
+@[18-24](Marble diagram)
+
++++
+![Composition](presentation/assets/composition.png)
 
 +++
 ## Operators
