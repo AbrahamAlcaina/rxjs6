@@ -1,6 +1,23 @@
-Rx.js 6
---- 
-Who I am
+# Rx6, the coolest Rx evolution
+
+---
+
+### Abraham Alcaina
+![Abraham](presentation/assets/abraham.jpg)
+
+@fa[twitter] @AbrahamAlcaina
+
+@fa[github] AbrahamAlcaina
+
++++
+
+### Víctor Oliva
+![Victor](presentation/assets/victor.jpg)
+
+@fa[twitter] @voliva_v
+
+@fa[github] voliva
+
 ---
 # What's Rx?
 @fa[arrow-down]
