@@ -41,13 +41,11 @@ for events, or data that changes over time.
 +++
 ## Sources
 
-@ul
 - Events: fromEvent(document, 'click')
 - Arrays: from([1,2,3,4])
 - Service calls: SockJS/Socket.io/Stomp/etc.
 - Promises
 - Subjects
-@ulend
 
 +++?code=presentation/assets/src/composition.js&lang=js&title=Composition
 
@@ -56,7 +54,6 @@ for events, or data that changes over time.
 +++
 ## Operators
 
-@ul
 - filter
 - map
 - reduce
@@ -67,7 +64,6 @@ for events, or data that changes over time.
 - debounce
 - distinct
 - publish
-@ulend
 
 Note:
 There are over 100 operators, but these are the most often used (or variations of these, like scan, bufferTime, throttle, debounceTime, etc. )
