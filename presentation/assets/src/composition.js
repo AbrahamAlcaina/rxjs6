@@ -1,9 +1,16 @@
 import { fromEvent } from 'rxjs';
-import { scan } from 'rxjs/operators';
 
 const myButton = $('#myButton'),
     myResult = $('#myResult');
 
+/// Old school
+const counter = 0;
+myButton.addEventListener('click', () => {
+    counter++;
+    myButton.innerText = counter;
+});
+
+/// Rxjs 8-)
 const source = fromEvent(myButton, 'click');
 
 const numOfClicks = source
