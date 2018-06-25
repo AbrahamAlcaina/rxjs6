@@ -28,7 +28,6 @@ const encryptLogic = pipe(
   map(ceasarEncrypt)
 );
 
-// prettier-ignore
 // let or pipe
 input$
   .let(encryptLogic)

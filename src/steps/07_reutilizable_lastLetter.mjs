@@ -5,9 +5,8 @@ import style from "./main.css";
 const inputText = document.getElementById("input-text");
 const encryptedText = document.getElementById("encrypted-text");
 const input$ = fromEvent(inputText, "keyup");
-// prettier-ignore
 const encrypted$ = input$
-    |> lastLetter 
+    |> lastLetter
     |> ceasarEncrypt(3);
 
 encrypted$.subscribe(s => (encryptedText.value += s));

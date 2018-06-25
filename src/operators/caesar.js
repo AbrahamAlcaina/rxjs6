@@ -12,7 +12,6 @@ const caesarAlgorithm = shift =>
     charToCode
   );
 
-// prettier-ignore
 const ceasarEncrypt = shift => stream$ => 
     stream$ |> map(caesarAlgorithm(shift));
 

@@ -13,11 +13,10 @@ const getLastCharFromEvent = e => {
 };
 const isLetter = str => str.length === 1 && str.match(/[a-z]/i);
 
-// prettier-ignore
 const encrypted$ =
-  input$ 
-    |> map(getLastCharFromEvent) 
-    |> filter(isLetter) 
-    |> ceasarEncrypt(3);
+  input$
+  |> map(getLastCharFromEvent)
+  |> filter(isLetter)
+  |> ceasarEncrypt(3);
 
 encrypted$.subscribe(s => (encryptedText.value += s));

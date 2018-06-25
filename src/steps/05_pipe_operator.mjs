@@ -22,11 +22,10 @@ const ceasarEncrypt = compose(
   charToCode
 );
 
-// prettier-ignore
 const encrypted$ =
   input$
-    |> map(getLastCharFromEvent)
-    |> filter(isLetter)
-    |> map(ceasarEncrypt);
+  |> map(getLastCharFromEvent)
+  |> filter(isLetter)
+  |> map(ceasarEncrypt);
 
 encrypted$.subscribe(s => (encryptedText.value += s));
