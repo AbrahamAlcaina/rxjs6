@@ -50,16 +50,19 @@ for events, or data that changes over time.
 ## Sources
 
 - Events: fromEvent(document, 'click')
-- Arrays: from([1,2,3,4])
 - Service calls: SockJS/Socket.io/Stomp/etc.
 - Promises
-- Subjects
+- Others
 
-+++?code=presentation/assets/src/composition.js&lang=js&title=Composition
+Note:
+Others: Arrays, Interval
+
++++?code=presentation/assets/src/composition.js&lang=js&title=Example
+
+@[3-11](addEventListener)
+@[13-20](with rxjs)
 
 +++?code=presentation/assets/src/composition2.js&lang=js
-
-@[1-14](Composition)
 
 +++
 ![Composition](presentation/assets/composition.png)
@@ -69,7 +72,7 @@ for events, or data that changes over time.
 
 - filter
 - map
-- reduce
+- scan (reduce)
 - take
 - buffer
 - combineLatest
@@ -91,7 +94,6 @@ covered using the new ones.
 +++?code=presentation/assets/src/import.js&lang=js&title=Imports
 
 @ul
-- No changes in the prototype
 - Modularity
 - Tree shaking
 @ulend
