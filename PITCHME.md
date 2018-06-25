@@ -1,5 +1,10 @@
 # Rx6, the coolest Rx evolution
-
+Note:
+Introduccion de RX
++ 
+TOC
++ 
+Motivación de esta charla
 ---
 
 ### Abraham Alcaina
@@ -19,13 +24,16 @@
 @fa[github] voliva
 
 ---
-# What's Rx?
+# Rx
 @fa[arrow-down]
+
+Note:
+Juego stream levantar la mano 
 
 +++
 ![Yoda](presentation/assets/yoda.png)
 
-Stream Everything Is
+A Stream Everything Is
 
 +++
 ![Array vs stream](presentation/assets/arrayVsStream.png)
@@ -52,7 +60,6 @@ for events, or data that changes over time.
 +++?code=presentation/assets/src/composition2.js&lang=js
 
 @[1-14](Composition)
-@[18-24](Marble diagram)
 
 +++
 ![Composition](presentation/assets/composition.png)
@@ -84,6 +91,7 @@ covered using the new ones.
 +++?code=presentation/assets/src/import.js&lang=js&title=Imports
 
 @ul
+- No changes in the prototype
 - Modularity
 - Tree shaking
 @ulend
@@ -111,7 +119,7 @@ covered using the new ones.
 @[1-5,7-13,14](Reduce)
 
 +++
-## A few name BC
+## A few name Breaking changes
 
 Note:
 Reserved JS names (if => iif, throw => throwError, do => tap, catch => catchError, etc.)
