@@ -16,12 +16,20 @@ const isLetter = str => str.length === 1 && str.match(/[a-z]/i);
 const charToCode = s => s.charCodeAt(0);
 const toChar = code => String.fromCharCode(code);
 const ceasarShift = curry((shift, code) => code + shift);
-const ceasarEncrypt = compose(toChar, ceasarShift(3), charToCode);
+const ceasarEncrypt = compose(
+  toChar,
+  ceasarShift(3),
+  charToCode
+);
 
 const encryptLogic = pipe(
   map(getLastCharFromEvent),
   filter(isLetter),
   map(ceasarEncrypt)
 );
+
+// prettier-ignore
 // let or pipe
-input$.pipe(encryptLogic).subscribe(s => (encryptedText.value += s));
+input$
+  .let(encryptLogic)
+  .subscribe(s => (encryptedText.value += s));

@@ -1,4 +1,4 @@
-import { fromEvent, pipe } from "rxjs";
+import { fromEvent } from "rxjs";
 import style from "./main.css";
 import { filter, map } from "rxjs/operators";
 import { compose, curry } from "./utils";
@@ -16,9 +16,17 @@ const isLetter = str => str.length === 1 && str.match(/[a-z]/i);
 const charToCode = s => s.charCodeAt(0);
 const toChar = code => String.fromCharCode(code);
 const ceasarShift = curry((shift, code) => code + shift);
-const ceasarEncrypt = compose(toChar, ceasarShift(3), charToCode);
+const ceasarEncrypt = compose(
+  toChar,
+  ceasarShift(3),
+  charToCode
+);
 
+// prettier-ignore
 const encrypted$ =
-  input$ |> map(getLastCharFromEvent) |> filter(isLetter) |> map(ceasarEncrypt);
+  input$
+    |> map(getLastCharFromEvent)
+    |> filter(isLetter)
+    |> map(ceasarEncrypt);
 
 encrypted$.subscribe(s => (encryptedText.value += s));

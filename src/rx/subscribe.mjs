@@ -11,5 +11,4 @@ const errorLogin = fn => err => {
 };
 const subscribe = (next, error = noop, complete = noop) => stream$ =>
   stream$.subscribe(next, errorLogin(error), completeLogin(complete));
-
 export { subscribe as default };

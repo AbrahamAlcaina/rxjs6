@@ -1,3 +1,4 @@
 logo : presentation/assets/logo.png
 theme-override : presentation/assets/PITCHME.css
 revealjs: 3.6.0
+highlight : solarized-light
