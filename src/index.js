@@ -1,6 +1,6 @@
 import { fromEvent, pipe } from "rxjs";
-import style from "./main.css";
 import { lastLetter, ceasarEncrypt } from "./operators";
+import style from "./main.css";
 // DOM manipulation
 const inputText = document.getElementById("input-text");
 const encryptedText = document.getElementById("encrypted-text");

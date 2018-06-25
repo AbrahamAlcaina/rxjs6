@@ -154,110 +154,152 @@ Question => Does tslint tool migrate custom operators (defined in prototype) => 
 @fa[arrow-down]
 
 +++
-@title[Pipeline function]
-## Pipeline function
-  https://github.com/ReactiveX/rxjs/blob/master/doc/pipeable-operators.md
+@title[Caesar algorithm explanation]
+## Caesar cipher
+![Caesar cipher](presentation/assets/Caesar_cipher.png)
+
++++
+@title[Show application]
+<iframe class="stretch" data-src="http://localhost:8080/"></iframe>
+
+
++++?code=src/steps/66_mesh.mjs&lang=js&title=Implementation with inline functions
+@title[classical implementation with inline functions]
+
+@[1-10](imports that change the prototype)
+@[12-23](Hard to test it)
+@[24-30](Hard to test it)
+@[31-34](Suscribe to show the result)
+
+Note:
+Things to improve: 
+- Change prototype 
+- Hard to test it 
+- No code reuse 
+
++++?code=src/steps/00_classical.mjs&lang=js&title=classical implementation in Rx5
+@title[classical implementation in Rx5]
+
+@[9-18](pure functions)
+@[19-28](easy to read)
+@[1-8](change prototype)
+
+Note:
+Improvements:
+- Easy to test maps 
+- pure functions
+- More reusable
+
+Things to improve: 
+- Change prototype
+
++++?code=src/steps/01_classical_with_compose.mjs&lang=js&title=Use compose to avoid 3 maps
+@title[Use compose to avoid 3 maps]
+
+@[16-21](Simple responsability)
+@[23-29](Only one map)
+@[1-8](change prototype)
+
+Note:
+Improvements:
+- Now we have a Caesar Encrypt Algorithm
+- Only one map little improvement
+Things to improve: 
+- Change prototype
+
++++?code=src/steps/03_classical_pipe.mjs&lang=js&title=Use pipe operator in Rx5.5
+@title[Use pipe operator in Rx5.5]
+
+@[3](No prototype changes)
+@[25-31](use of pipe method)
+
+Note:
+Improvements 
+- Avoid prototype change
+- Use pipe method
+
++++?code=src/steps/04_pipe.mjs&lang=js&title=Use pipe function
+@title[Use pipe function]
+
+@[1-4](import pipe function)
+@[25-29](reusable logic)
+@[32-35](let operator)
+
+Note:
+Improvements
+- Complete reusable encryptLogic
+- Custom operator
 
 +++
 @title[Pipeline operator]
 ## Pipeline operator
   https://github.com/tc39/proposal-pipeline-operator
 
-+++
-@title[Caesar algorithm explanation]
-## Caesar cipher
-![Caesar cipher](presentation/assets/Caesar_cipher.png)
+Note:
+- Unix shell | in bash
+- Other languages like Elixir, F#
+- Current status stage 2
+- Babel support
 
-+++?image=presentation/assets/66.png&size=contain&color=#ABB8C3
-@title[classical implementation with inline functions]
-@ul[issues]
-- Things to improve: 
-- Change prototype 
-- Hard to test it 
-- No code reuse 
-@ulend
-
-+++?image=presentation/assets/00.png&size=contain&color=#ABB8C3
-@title[classical implementation in Rx5]
-@ul[issues]
-- Improvements:
-- Easy to test maps
-- More reusable
-- Things to improve: 
-- Change prototype
-@ulend
-
-+++?image=presentation/assets/01.png&size=contain&color=#ABB8C3
-@title[Use compose to avoid 3 maps]
-@ul[issues]
-- Improvements:
-- Now we have a Caesar Encrypt Algorithm
-- Things to improve: 
-- Change prototype
-@ulend
-
-+++?image=presentation/assets/02.png&size=contain&color=#ABB8C3
-@title[Use curried function, just to show an alternative way]
-@ul[issues]
-- Alternative solution with curry
-@ulend
-
-+++?image=presentation/assets/03.png&size=contain&color=#ABB8C3
-@title[Use pipe operator in Rx5.5]
-@ul[issues]
-- Use pipe opeator
-- PROS
-- Avoid prototype change
-@ulend
-
-+++?image=presentation/assets/04.png&size=contain&color=#ABB8C3
-@title[Use pipe function]
-@ul[issues]
-- Use pipe function
-- PROS 
-- Complete reusable encryptLogic
-@ulend
-
-+++?image=presentation/assets/05.png&size=contain&color=#ABB8C3
++++?code=src/steps/05_pipe_operator.mjs&lang=js&title=Use pipe operator
 @title[Use pipe operator]
-@ul[issues]
-- Use pipeline operator like Elixir, F#, etc
-- PROS 
-- Improve readability
-@ulend
 
-+++?image=presentation/assets/06.png&size=contain&color=#ABB8C3
-@title[Extract Caesar algorithm in an operator]
-@ul[issues]
-- Extract Caesar algorithm as a rx operator
-@ulend
+@[1-4](not used pipe function)
+@[10-23](pipe operator)
+@[26-30](pipe operator)
 
-+++?image=presentation/assets/caesar.png&size=contain&color=#ABB8C3
+Note:
+Improvements:
+- More redeable
+
++++?code=src/operators/caesar.js&lang=js&title=Caesar operator
 @title[Caesar operator]
 
-+++?image=presentation/assets/07.png&size=contain&color=#ABB8C3
+@[4-13](Caesar Algorithm)
+@[15-19](Stream Caesar Algorithm)
+
++++?code=src/operators/lastLetter.js&lang=js&title=Extract last letter in an operator
 @title[Extract last letter in an operator]
-@ul[issues]
-- Extract lastLetter as a rx operator
-@ulend
 
-+++?image=presentation/assets/lastLetter.png&size=contain&color=#ABB8C3
-@title[LastLetter operator]
++++?code=src/steps/07_reutilizable_lastLetter.mjs&lang=js&title=Extract Caesar algorithm in an operator
+@title[Extract Caesar algorithm in an operator]
 
-+++?image=presentation/assets/08.png&size=contain&color=#ABB8C3
-@title[Extract generic subscribe]
-@ul[issues]
-- reusable subscribe
-@ulend
+Note:
+- Fully readeable code
+- fully reasuable
 
-+++?image=presentation/assets/subscribe.png&size=contain&color=#ABB8C3
++++
+@title[Custom subscribe]
+## Custom subscribe
+  Real code reuse example
+
++++?code=src/rx/subscribe.mjs&lang=js&title=HOF subscribe
 @title[HOF subscribe]
-@ul[issues]
-- Define a a custom subscribe to enhace it with login
-@ulend
 
-+++?image=presentation/assets/09.png&size=contain&color=#ABB8C3
-@title[Extract DOM manipulation]
+Note:
+Improvements
+- Define a a custom subscribe to enhace cross-cutting concern
+- login, but why not unsubscribe
+- Easy vs Simple
+Subscribe 
+  - 3 functions next, error, finally
+  - custom cross cutting concern
+  - HOF to enhance next, error
+  - HOF for susbscribe
 
-+++?image=presentation/assets/domManipulation.png&size=contain&color=#ABB8C3
-@title[DOM manipulation]
++++?code=src/steps/08_reutilizable_subscribe.mjs&lang=js&title=Extract generic subscribe
+@title[Extract generic subscribe]
+
+@[4](import custom subscribe)
+@[10-14](pipe to subscribe)
+
+Note:
+- reusable subscribe
+- with cross cutting concerns
+
++++?code=src/steps/09_extract_dom.mjs&lang=js&title=Extract DOM operations
+@title[Extract DOM operations]
+
+Note:
+  - Final version
+  - Nobody uses this iterative process (Just avoid the simpler ones)

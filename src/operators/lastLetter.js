@@ -2,11 +2,13 @@ import { map, filter } from "rxjs/operators";
 
 const getLastCharFromEvent = e => {
   const { value } = e.target;
-  return value.substring(value.length - 1);
+  return value ? value.substring(value.length - 1) : "";
 };
 const isLetter = str => str.length === 1 && str.match(/[a-z]/i);
-
+// prettier-ignore
 const lastLetterOperator = stream$ =>
-  stream$ |> map(getLastCharFromEvent) |> filter(isLetter);
+  stream$ 
+    |> map(getLastCharFromEvent) 
+    |> filter(isLetter);
 
 export { lastLetterOperator as default };
