@@ -23,6 +23,15 @@ Motivación de esta charla
 
 @fa[github] voliva
 
++++
+
+![RTT](presentation/assets/rtt.gif)
+
+Note:
+- Reactive trader cloud example
+- Adaptive growing company, 4 offices
+- This project is Open source, available at github
+
 ---
 # Rx
 @fa[arrow-down]
@@ -306,3 +315,13 @@ Note:
 Note:
   - Final version
   - Nobody uses this iterative process (Just avoid the simpler ones)
+
+---
+
+## Thank you
+
+<div class="credits">
+  <span class="author">Abraham Alcaina</span>
+  <span class="author">Víctor Oliva</span>
+</div>
+![Adaptive](presentation/assets/adaptive.png)
