@@ -167,7 +167,7 @@ Question => Does tslint tool migrate custom operators (defined in prototype) => 
 
 
 +++?code=src/steps/66_mesh.mjs&lang=js&title=Implementation with inline functions
-@title[classical implementation with inline functions]
+@title[implementation with inline functions]
 
 @[1-10](imports that change the prototype)
 @[12-23](Hard to test it)
@@ -175,19 +175,23 @@ Question => Does tslint tool migrate custom operators (defined in prototype) => 
 @[31-34](Suscribe to show the result)
 
 Note:
+Here we want to show a classical RX application with inline functions as operators
 Things to improve: 
 - Change prototype 
 - Hard to test it 
 - No code reuse 
 
-+++?code=src/steps/00_classical.mjs&lang=js&title=classical implementation in Rx5
-@title[classical implementation in Rx5]
++++?code=src/steps/00_classical.mjs&lang=js&title=Use pure functions
+@title[Use pure functions]
 
 @[9-18](pure functions)
 @[19-28](easy to read)
 @[1-8](change prototype)
 
 Note:
+Here we use pure functions and we group in two groups:
+  - get last character
+  - caesar algorithm
 Improvements:
 - Easy to test maps 
 - pure functions
@@ -196,8 +200,8 @@ Improvements:
 Things to improve: 
 - Change prototype
 
-+++?code=src/steps/01_classical_with_compose.mjs&lang=js&title=Use compose to avoid 3 maps
-@title[Use compose to avoid 3 maps]
++++?code=src/steps/01_classical_with_compose.mjs&lang=js&title=Use compose to have a cesar algorithm
+@title[Use compose to have a cesar algorithm]
 
 @[16-21](Simple responsability)
 @[23-29](Only one map)
@@ -210,18 +214,19 @@ Improvements:
 Things to improve: 
 - Change prototype
 
-+++?code=src/steps/03_classical_pipe.mjs&lang=js&title=Use pipe operator in Rx5.5
-@title[Use pipe operator in Rx5.5]
++++?code=src/steps/03_classical_pipe.mjs&lang=js&title=Use pipe operator and not change the prototype
+@title[Use pipe operator]
 
 @[3](No prototype changes)
 @[25-31](use of pipe method)
 
 Note:
+Usign the new way to import operators and the pipe method we don't change the prototype and tools like webpack will `tree-sharking` the code
 Improvements 
 - Avoid prototype change
 - Use pipe method
 
-+++?code=src/steps/04_pipe.mjs&lang=js&title=Use pipe function
++++?code=src/steps/04_pipe.mjs&lang=js&title=Use pipe function and now we can reuse the stream logic
 @title[Use pipe function]
 
 @[1-4](import pipe function)
@@ -229,6 +234,7 @@ Improvements
 @[32-35](let operator)
 
 Note:
+Thanks to the pipe function is possible to create a reusable pieces of code over streams
 Improvements
 - Complete reusable encryptLogic
 - Custom operator
@@ -239,6 +245,9 @@ Improvements
   https://github.com/tc39/proposal-pipeline-operator
 
 Note:
+The pipeline operator is under revision by TC39. With this new feature will be able to create more
+readable code.
+Examples
 - Unix shell | in bash
 - Other languages like Elixir, F#
 - Current status stage 2
@@ -255,19 +264,23 @@ Note:
 Improvements:
 - More redeable
 
-+++?code=src/operators/caesar.js&lang=js&title=Caesar operator
++++?code=src/operators/caesar.js&lang=js&title=Create a Caesar operator
 @title[Caesar operator]
 
 @[4-13](Caesar Algorithm)
 @[15-19](Stream Caesar Algorithm)
 
+Note:
+Let's extract the code in another file to have more
+
 +++?code=src/operators/lastLetter.js&lang=js&title=Extract last letter in an operator
 @title[Extract last letter in an operator]
 
-+++?code=src/steps/07_reutilizable_lastLetter.mjs&lang=js&title=Extract Caesar algorithm in an operator
-@title[Extract Caesar algorithm in an operator]
++++?code=src/steps/07_reutilizable_lastLetter.mjs&lang=js&title=import lastLetter/Ceasear operators 
+@title[import lastLetter/Ceasear operators ]
 
 Note:
+
 - Fully readeable code
 - fully reasuable
 
@@ -276,12 +289,16 @@ Note:
 ## Custom subscribe
   Real code reuse example
 
+Note:
+Here a production code taking advantage of the pipeline operator
+
 +++?code=src/rx/subscribe.mjs&lang=js&title=HOF subscribe
 @title[HOF subscribe]
 
 Note:
+Reusuable x-cutting concers, in this case have a subscribe that automatically logs on fails and finishes
 Improvements
-- Define a a custom subscribe to enhace cross-cutting concern
+- Define a a custom subscribe to enhace cross-cutting concerns
 - login, but why not unsubscribe
 - Easy vs Simple
 Subscribe 
